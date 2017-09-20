@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ThingDefs>  
+  <!--=============== Cheetah ===============-->
+
+
+  <ThingDef ParentName="BaseShip">
+    <thingClass>OHUShips.ShipBase</thingClass>
+    <defName>FR_Dummas</defName>
+    <label>Dummas</label>
+    <description>Yeah, huh, we put wings on a bomb and a engine. it's going to be awesome !
+	
+	
+	</description>
+
+ 
+	
+	<graphicData>
+      <texPath>Things/Ships/FR_Ships/FR_Dummas_v1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Cutout</shaderType>
+      <drawSize>(5,5)</drawSize>
+    </graphicData>
+	
+
+	<size>(5,2)</size>
+    <rotatable>true</rotatable>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <passability>Impassable</passability>
+    <castEdgeShadows>false</castEdgeShadows>
+    <fillPercent>1.0</fillPercent>
+    <designationCategory>Ship</designationCategory>
+    <iconDrawScale>1</iconDrawScale>
+    <statBases>
+      <MaxHitPoints>5</MaxHitPoints>
+      <WorkToBuild>1500</WorkToBuild>
+      <Flammability>0.1</Flammability>
+      <Mass>6000</Mass>	 	  
+    </statBases>
+    
+	
+	<comps>
+      <li Class="OHUShips.CompProperties_Ship">
+    
+		<TicksToImpact>600</TicksToImpact>
+        <TicksToDespawn>300</TicksToDespawn>
+        
+
+		<WorldMapTravelSpeedFactor>1</WorldMapTravelSpeedFactor>
+        <maxCargo>250</maxCargo>
+        <maxPassengers>2</maxPassengers>
+        <CanBeStartingShip>true</CanBeStartingShip>
+        <availableToFactions>
+		<li>Outlander</li>
+	    </availableToFactions>
+		
+		
+
+        <LeavingShipDef>FR_Dummas_Leaving</LeavingShipDef>
+        <IncomingAngle>65</IncomingAngle>
+        <ShadowGraphicPath>Things/Ships/FR_Ships/FR_Dummas_Shadow</ShadowGraphicPath>
+        <FleetIconGraphicPath>Things/Ships/FR_Ships/FR_Dummas_FleetIcon</FleetIconGraphicPath>
+		
+
+		<!-- turretoffset = pos x east, z ??? ,  pos y north  -->
+		
+   
+   
+   
+   
+	 </li>
+	 
+
+	  <li Class="CompProperties_Explosive">
+        <explosiveRadius>15.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <chanceNeverExplodeFromDamage>0.05</chanceNeverExplodeFromDamage>
+       </li>
+	 
+
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>7.0</fuelConsumptionRate>
+        <fuelCapacity>800.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>Chemfuel</li>
+          </thingDefs>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <showFuelGizmo>true</showFuelGizmo>
+        <targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+        <initialConfigurableTargetFuelLevel>600</initialConfigurableTargetFuelLevel>
+        <drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
+        <autoRefuelPercent>1.00</autoRefuelPercent>
+      </li>
+    </comps>
+	
+    <costList>
+      <Steel>800</Steel>
+      <Plasteel>200</Plasteel>
+      <Component>30</Component>
+    </costList>
+		<researchPrerequisites>
+			<li>DefenceTech</li>
+			<li>ShipBasics</li>
+	
+		</researchPrerequisites>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>RGBA(1.00,1.00,1.00,1)</only>
+        </li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+
+
+  <ThingDef>
+    <defName>FR_Dummas_Leaving</defName>
+    <label>Dummas(leaving)</label>
+    <category>Skyfaller</category>
+		<thingClass>OHUShips.ShipBase_Traveling</thingClass>
+		<tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Special/DropPod</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutFlying</shaderType>
+      <drawSize>1.9</drawSize>
+    </graphicData>
+    <altitudeLayer>FlyingItem</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <drawOffscreen>true</drawOffscreen>
+    <selectable>false</selectable>
+  </ThingDef>  
+  
+</ThingDefs>

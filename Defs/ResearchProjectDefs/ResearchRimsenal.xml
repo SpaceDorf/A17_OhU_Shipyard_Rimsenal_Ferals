@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ResearchProjectDef>
+    <defName>GD_SpaceCraft</defName>
+    <label>Greydale Spacecraft</label>
+    <tab>RimsenalResearch</tab>  
+    <prerequisites>
+      <li>MicroelectronicsBasics</li>
+	  <li>DefenceTech</li>
+	  <li>ShipBasics</li>
+    </prerequisites>
+    <techLevel>Industrial</techLevel>
+    <description>Allows you to build Graydale Defence's Air and Spacecraft</description>
+    <baseCost>500</baseCost>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+	<requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+  		<researchViewX>4</researchViewX>
+		<researchViewY>5</researchViewY>
+  </ResearchProjectDef>
+
+   <ResearchProjectDef>
+    <defName>YP_SpaceCraft</defName>
+    <label>Yunhwa Precision Spacecraft</label>
+    <tab>RimsenalResearch</tab>
+    <prerequisites>
+      <li>MicroelectronicsBasics</li>
+	  <li>ShardTech</li>
+	  <li>ShipBasics</li>
+    </prerequisites>
+    <techLevel>Industrial</techLevel>
+    <description>Allows you to build Yunhwa Precision's Air and Spacecraft</description>
+    <baseCost>500</baseCost>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+	<requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+  		<researchViewX>5</researchViewX>
+		<researchViewY>5</researchViewY>
+  </ResearchProjectDef>
+  
+   <ResearchProjectDef>
+    <defName>JI_SpaceCraft</defName>
+    <label>Jotun Interstellar Spacecraft</label>
+    <tab>RimsenalResearch</tab>
+    <prerequisites>
+      <li>MicroelectronicsBasics</li>
+	  <li>MoltenTech</li>
+	  <li>ShipBasics</li>
+    </prerequisites>
+    <techLevel>Industrial</techLevel>
+    <description>Allows you to build Jotun Interstellar's Air and Spacecraft</description>
+    <baseCost>500</baseCost>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+	<requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+  		<researchViewX>6</researchViewX>
+		<researchViewY>5</researchViewY>
+  </ResearchProjectDef>
+  
+   <ResearchProjectDef>
+    <defName>TE_SpaceCraft</defName>
+    <label>Tisiphone Enterprise Spacecraft</label>
+    <tab>RimsenalResearch</tab>
+    <prerequisites>
+      <li>MicroelectronicsBasics</li>
+	  <li>KineticTech</li>
+	  <li>ShipBasics</li>
+    </prerequisites>
+    <techLevel>Industrial</techLevel>
+    <description>Allows you to build Tisiphone Enterprise's Air and Spacecraft</description>
+    <baseCost>500</baseCost>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+	<requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+  		<researchViewX>7</researchViewX>
+		<researchViewY>5</researchViewY>
+  </ResearchProjectDef>
+ 
+  
+ 
+  
+  
+  
+</Defs>
