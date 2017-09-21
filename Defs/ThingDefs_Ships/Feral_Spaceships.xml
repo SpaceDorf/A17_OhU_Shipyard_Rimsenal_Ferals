@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <ThingDefs>  
-  <!--=============== Cheetah ===============-->
+  <!--===============Ferral Dummas ===============-->
 
 
   <ThingDef ParentName="BaseShip">
     <thingClass>OHUShips.ShipBase</thingClass>
     <defName>FR_Dummas</defName>
     <label>Dummas</label>
-    <description>Yeah, huh, we put wings on a bomb and a engine. it's going to be awesome !
+    <description>Is it a bird ? Is it a plane ? Why does it fly at all ? 
+	Yeah, huh, we put wings on a bomb and a engine. it's going to be awesome !
 	
 	
 	</description>
-
  
 	
 	<graphicData>
-      <texPath>Things/Ships/FR_Ships/FR_Dummas_v1</texPath>
+      <texPath>Things/Ships/FR_Ships/FR_Dummas_Noseless</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>Cutout</shaderType>
-      <drawSize>(5,5)</drawSize>
+      <drawSize>(5,3)</drawSize>
     </graphicData>
 	
 
-	<size>(5,2)</size>
+	<size>(3,1)</size>
     <rotatable>true</rotatable>
     <altitudeLayer>MoteOverhead</altitudeLayer>
     <passability>Impassable</passability>
@@ -52,7 +52,9 @@
         <CanBeStartingShip>true</CanBeStartingShip>
         <availableToFactions>
 		<li>Outlander</li>
-	    </availableToFactions>
+		<li>Feral</li>
+
+		</availableToFactions>
 		
 		
 
@@ -62,21 +64,27 @@
         <FleetIconGraphicPath>Things/Ships/FR_Ships/FR_Dummas_FleetIcon</FleetIconGraphicPath>
 		
 
-		<!-- turretoffset = pos x east, z ??? ,  pos y north  -->
+			
+   
+   
+   
+   		<!-- turretoffset = pos x east, z ??? ,  pos y north  -->
 		
-   
-   
+       <weaponSlots>
+		<li>
+          <SlotName>Port Gun</SlotName>
+          <slotType>LightCaliber</slotType>
+          <turretPosOffset>(2,2,0)</turretPosOffset>
+          <turretMinSize>(3,1)</turretMinSize>
+	    </li>
+	   </weaponSlots>
+	
    
    
 	 </li>
 	 
 
-	  <li Class="CompProperties_Explosive">
-        <explosiveRadius>15.9</explosiveRadius>
-        <explosiveDamageType>Bomb</explosiveDamageType>
-        <chanceNeverExplodeFromDamage>0.05</chanceNeverExplodeFromDamage>
-       </li>
-	 
+	
 
       <li Class="CompProperties_Refuelable">
         <fuelConsumptionRate>7.0</fuelConsumptionRate>
@@ -105,7 +113,8 @@
 			<li>ShipBasics</li>
 	
 		</researchPrerequisites>
-    <colorGenerator Class="ColorGenerator_Options">
+
+		<colorGenerator Class="ColorGenerator_Options">
       <options>
         <li>
           <weight>10</weight>

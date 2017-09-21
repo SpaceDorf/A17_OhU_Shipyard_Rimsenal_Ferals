@@ -2,11 +2,11 @@
 <ThingDefs>
 
   <ThingDef ParentName="ResourceBase">
-    <defName>ShipTurretTemplate</defName>
-    <label>improvised ship turret(boxed)</label>
-    <description>An improvised turret that automatically fires at nearby enemies. Explodes when damaged. Its hacked-together AI brain isn't very smart, and can't be directly controlled, so beware of friendly fire.</description>
+    <defName>DummasNoseBomb</defName>
+    <label>Dummas_Nose_Bomb(boxed)</label>
+    <description>BOOOOOOOOM !</description>
     <graphicData>
-      <texPath>Things/ShipWeapons/ShipWeapon_Item</texPath>
+      <texPath>Things/ShipWeapons/FR_ShipWeapon_Item</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Metal_Drop</soundInteract>
@@ -15,7 +15,7 @@
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
       <MarketValue>1000</MarketValue>
-      <Mass>15</Mass>
+      <Mass>50</Mass>
       <Flammability>1.0</Flammability>
 			<DeteriorationRate>0.3</DeteriorationRate>
 		</statBases>
@@ -48,7 +48,7 @@
       	<li>OHUDropShip</li>
 	   </availableToShips>
         <weaponSystemType>LightCaliber</weaponSystemType>
-        <TurretToInstall>ShipTurret_Turret</TurretToInstall>
+        <TurretToInstall>Dummas_Nose</TurretToInstall>
       </li>
     </comps>
   </ThingDef>
@@ -56,19 +56,22 @@
   <!--=============== Improvised turret ===============-->
   
   <ThingDef ParentName="BuildingBase">
-    <defName>ShipTurret_Turret</defName>
-    <label>improvised turret</label>
+    <defName>Dummas_Nose</defName>
+    <label>da Bomb</label>
     <drawerType>RealtimeOnly</drawerType>
-    <thingClass>OHUShips.Building_ShipTurret</thingClass>
+ 
+  <!--=============== Path for Turret Base ===============-->
+     <thingClass>OHUShips.Building_ShipTurret</thingClass>
     <graphicData>
-      <texPath>Things/ShipWeapons/LightCaliber_Base</texPath>
+	
+      <texPath>Things/ShipWeapons/FR_Dummas_Nose</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(3,3)</drawSize>
+      <drawSize>(1,3)</drawSize>
       <damageData>
         <rect>(0.2,0.2,0.6,0.6)</rect>
       </damageData>
     </graphicData>
-    <size>(1,1)</size>
+    <size>(3,1)</size>
     <stealable>false</stealable>
     <rotatable>false</rotatable>
     <statBases>
@@ -86,7 +89,7 @@
         <chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
       </li>
     </comps>
-    <description>An improvised turret that automatically fires at nearby enemies. Explodes when damaged. Its hacked-together AI brain isn't very smart, and can't be directly controlled, so beware of friendly fire.</description>
+    <description>It`s so large and round and beautiful .. </description>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
     <fillPercent>0.4</fillPercent>
@@ -104,7 +107,7 @@
 			<ai_combatDangerous>true</ai_combatDangerous>
       <turretGunDef>Gun_TurretImprovised</turretGunDef>
       <turretBurstCooldownTime>5.15</turretBurstCooldownTime>
-      <turretTopgraphicPath>Things/Building/Security/TurretImprovised_Top</turretTopgraphicPath>
+      <turretTopgraphicPath>Things/ShipWeapons/LightCaliber_Base</turretTopgraphicPath>
 	 <isInert>true</isInert>
       <isEdifice>false</isEdifice>
 
